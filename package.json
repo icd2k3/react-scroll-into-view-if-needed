@@ -8,7 +8,8 @@
   "author": "JUSTIN SCHRADER <icd2k3@gmail.com>",
   "license": "MIT",
   "peerDependencies": {
-    "react": "^16.3.0"
+    "prop-types": "^15.6.1",
+    "react": "^16.0.0"
   },
   "dependencies": {
     "scroll-into-view-if-needed": "^1.5.0"
@@ -17,18 +18,33 @@
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.3",
+    "babel-jest": "^22.4.3",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
+    "coveralls": "^3.0.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
+    "jest": "^22.4.3",
     "prop-types": "^15.6.1",
     "react": "^16.3.2",
-    "rollup": "^0.58.0",
+    "react-dom": "^16.3.2",
+    "rollup": "^0.58.1",
     "rollup-plugin-babel": "^3.0.3",
     "rollup-plugin-commonjs": "^9.1.0",
     "rollup-plugin-node-resolve": "^3.3.0"
   },
   "scripts": {
+    "build": "rollup -c",
+    "lint": "eslint ./src/**",
     "prepublishOnly": "yarn build",
-    "build": "rollup -c"
+    "test": "jest",
+    "travis": "yarn run lint && jest && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   }
 }
