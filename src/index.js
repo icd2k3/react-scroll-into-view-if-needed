@@ -7,6 +7,7 @@ export default class ScrollIntoViewIfNeeded extends PureComponent {
     active: PropTypes.bool,
     children: PropTypes.node.isRequired,
     elementType: PropTypes.string,
+    // this shape should mirror the scroll-into-view-if-needed options
     options: PropTypes.shape({
       boundary: PropTypes.node,
       centerIfNeeded: PropTypes.bool,
@@ -18,11 +19,12 @@ export default class ScrollIntoViewIfNeeded extends PureComponent {
         'easeInOut',
         'linear',
       ]),
-      offset: PropTypes.shape(),
-      top: PropTypes.number,
-      right: PropTypes.number,
-      bottom: PropTypes.number,
-      left: PropTypes.number,
+      offset: PropTypes.shape({
+        top: PropTypes.number,
+        right: PropTypes.number,
+        bottom: PropTypes.number,
+        left: PropTypes.number,
+      }),
     }),
   };
 
@@ -35,8 +37,8 @@ export default class ScrollIntoViewIfNeeded extends PureComponent {
     },
   };
 
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.node = createRef();
   }
 
@@ -61,7 +63,13 @@ export default class ScrollIntoViewIfNeeded extends PureComponent {
   };
 
   render() {
-    const { elementType, children } = this.props;
-    return createElement(elementType, { ref: this.node, ...this.props }, children);
+    const {
+      active,
+      elementType,
+      children,
+      options,
+      ...wrapperProps
+    } = this.props;
+    return createElement(elementType, { ref: this.node, ...wrapperProps }, children);
   }
 }
