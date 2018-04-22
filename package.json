@@ -1,6 +1,6 @@
 {
   "name": "react-scroll-into-view-if-needed",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A thin component wrapper around scroll-into-view-if-needed",
   "main": "dist/umd/index.js",
   "module": "dist/es/index.js",
@@ -24,6 +24,7 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "coveralls": "^3.0.0",
+    "cross-env": "^5.1.4",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.19.1",
@@ -41,7 +42,7 @@
     "rollup-plugin-node-resolve": "^3.3.0"
   },
   "scripts": {
-    "build": "rollup -c",
+    "build": "rollup -c && cross-env BUILD_TYPE=standalone rollup -c",
     "lint": "eslint ./src/**",
     "prepublishOnly": "yarn build",
     "test": "jest",
