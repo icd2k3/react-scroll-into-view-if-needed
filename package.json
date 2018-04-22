@@ -1,19 +1,23 @@
 {
   "name": "react-scroll-into-view-if-needed",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A thin component wrapper around scroll-into-view-if-needed",
   "main": "dist/umd/index.js",
   "module": "dist/es/index.js",
   "repository": "git@github.com:icd2k3/react-scroll-into-view-if-needed.git",
-  "author": "JUSTIN SCHRADER <icd2k3@gmail.com>",
+  "author": "Justin Schrader <icd2k3@gmail.com>",
+  "keywords": [
+    "react",
+    "scroll-into-view-if-needed",
+    "scroll",
+    "scrolling"
+  ],
   "license": "MIT",
   "peerDependencies": {
     "prop-types": "^15.6.1",
     "react": "^16.0.0"
   },
-  "dependencies": {
-    "scroll-into-view-if-needed": "^1.5.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
@@ -39,7 +43,8 @@
     "rollup": "^0.58.1",
     "rollup-plugin-babel": "^3.0.3",
     "rollup-plugin-commonjs": "^9.1.0",
-    "rollup-plugin-node-resolve": "^3.3.0"
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "scroll-into-view-if-needed": "^1.5.0"
   },
   "scripts": {
     "build": "rollup -c && cross-env BUILD_TYPE=standalone rollup -c",

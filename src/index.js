@@ -1,5 +1,6 @@
 import { createElement, createRef, PureComponent } from 'react';
 import PropTypes from 'prop-types';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import scrollIntoViewIfNeeded from 'scroll-into-view-if-needed';
 
 export default class ScrollIntoViewIfNeeded extends PureComponent {
