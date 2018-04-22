@@ -28,6 +28,16 @@ const MyComponent = () => (
 );
 ```
 
+## Standalone Version
+
+The standalone version does _not_ come bundled with [scroll-into-view-if-needed](https://www.npmjs.com/package/scroll-into-view-if-needed). Use this version if you'd like to maintain your own dependency for scroll-into-view-if-needed.
+
+ES version:
+`import ScrollIntoViewIfNeeded from 'react-scroll-into-view-if-needed/dist/es/standalone.js'`
+
+UMD version:
+`import ScrollIntoViewIfNeeded from 'react-scroll-into-view-if-needed/dist/umd/standalone.js'`
+
 ## Optional Props
 
 #### active
@@ -47,3 +57,4 @@ Set the wrapper component type. For example, this could also be `'footer'`, `'bu
 > Default: `{ duration: 250, easing: 'easeOut' }`
 
 The `options` prop simply passes options to `scroll-into-view-if-needed`. See all the possible options in their [API documentation](https://www.npmjs.com/package/scroll-into-view-if-needed#api).
+
