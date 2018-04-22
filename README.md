@@ -4,7 +4,7 @@
 
 ## Description
 
-A thin react component wrapper bundled with the fantastic [scroll-into-view-if-needed](https://www.npmjs.com/package/scroll-into-view-if-needed) polyfill.
+A thin react component wrapper bundled with the fantastic [scroll-into-view-if-needed](https://www.npmjs.com/package/scroll-into-view-if-needed) [ponyfill](https://ponyfill.com).
 
 ## Install
 
