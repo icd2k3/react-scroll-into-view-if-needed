@@ -29,12 +29,14 @@ const MyComponent = () => (
 
 ## Standalone Version
 
-The standalone version does _not_ come bundled with [scroll-into-view-if-needed](https://www.npmjs.com/package/scroll-into-view-if-needed). Use this version if you'd like to maintain your own dependency for scroll-into-view-if-needed.
+The standalone version does **not** come bundled with [scroll-into-view-if-needed](https://www.npmjs.com/package/scroll-into-view-if-needed). Use this version if you'd like to maintain your own dependency for scroll-into-view-if-needed, or if you're already using scroll-into-view-if-needed in other areas of your project.
 
-ES version:
+**ES version:**
+
 `import ScrollIntoViewIfNeeded from 'react-scroll-into-view-if-needed/dist/es/standalone.js'`
 
-UMD version:
+**UMD version:**
+
 `import ScrollIntoViewIfNeeded from 'react-scroll-into-view-if-needed/dist/umd/standalone.js'`
 
 ## Optional Props
