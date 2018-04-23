@@ -40,6 +40,9 @@ The standalone version does **not** come bundled with [scroll-into-view-if-neede
 `import ScrollIntoViewIfNeeded from 'react-scroll-into-view-if-needed/dist/umd/standalone.js'`
 
 ## Optional Props
+The following props are supported by the component.
+
+You can _also_ pass standard html attributes like `className`, `id`, etc...
 
 #### active
 > Type: `boolean`
