@@ -1,6 +1,5 @@
 [![Build Status](https://travis-ci.org/icd2k3/react-scroll-into-view-if-needed.svg?branch=master)](https://travis-ci.org/icd2k3/react-scroll-into-view-if-needed)
 [![Coverage Status](https://coveralls.io/repos/github/icd2k3/react-scroll-into-view-if-needed/badge.svg)](https://coveralls.io/github/icd2k3/react-scroll-into-view-if-needed)
-[![dependencies Status](https://david-dm.org/icd2k3/react-scroll-into-view-if-needed/status.svg)](https://david-dm.org/icd2k3/react-scroll-into-view-if-needed)
 
 ## Description
 
