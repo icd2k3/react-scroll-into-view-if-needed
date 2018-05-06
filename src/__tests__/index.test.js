@@ -15,8 +15,8 @@ test('Render with no props', () => {
   expect(wrapper).toMatchSnapshot();
   expect(mockScroll).toHaveBeenCalledTimes(1);
   expect(mockScroll).toHaveBeenCalledWith(null, {
-    duration: 250,
-    easing: 'easeOut',
+    behavior: 'smooth',
+    scrollMode: 'if-needed',
   });
 });
 
@@ -71,10 +71,10 @@ test('Expect elementType to be respected', () => {
 
 test('Expect custom options to be passed to `scroll-into-view-if-needed`', () => {
   shallow(
-    <ScrollIntoViewIfNeeded options={{ centerIfNeeded: true }}>
+    <ScrollIntoViewIfNeeded options={{ block: 'center' }}>
       <MockChild />
     </ScrollIntoViewIfNeeded>,
   );
 
-  expect(mockScroll).toHaveBeenLastCalledWith(null, { centerIfNeeded: true });
+  expect(mockScroll).toHaveBeenLastCalledWith(null, { block: 'center' });
 });

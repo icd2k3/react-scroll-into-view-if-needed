@@ -39,16 +39,52 @@ The standalone version does **not** come bundled with [scroll-into-view-if-neede
 
 `import ScrollIntoViewIfNeeded from 'react-scroll-into-view-if-needed/dist/umd/standalone.js'`
 
-## Optional Props
-The following props are supported by the component.
-
-You can _also_ pass standard html attributes like `className`, `id`, etc...
-
 #### active
 > Type: `boolean`
 > Default: `true`
 
 The `active` prop allows controll of _when_ to scroll to the component. By default, it will attempt to scroll as soon as it is mounted, but you can set this prop to manually control when to trigger the scroll behavior from the parent component.
+
+```js
+class Example extends React.PureComponent {
+  constructor(props) {
+    super(props);
+    this.state = { active: false };
+  }
+
+  handleScrollToggle = () => this.setState({ active: !this.state.active });
+
+  render() {
+    const { active } = this.state;
+
+    return (
+      <div>
+        <button onClick={this.handleScrollToggle}>Scroll</button>
+        <div style={{ paddingTop: 2000 }}>
+          <ScrollIntoViewIfNeeded active={active}>
+            <div>Hello</div>
+          </ScrollIntoViewIfNeeded>
+        </div>
+      </div>
+    );
+  }
+}
+```
+
+#### options
+> Type: `object`
+> Default: `{ behavior: 'smooth', scrollMode: 'if-needed' }`
+> Full list of options [here](https://www.npmjs.com/package/scroll-into-view-if-needed#api)
+
+The `options` prop simply passes options to `scroll-into-view-if-needed`. See all the possible options in their [API documentation](https://www.npmjs.com/package/scroll-into-view-if-needed#api).
+
+```js
+<ScrollIntoViewIfNeeded options={{
+  scrollMode: 'always',
+}}>
+  <div>Hello</div>
+</ScrollIntoViewIfNeeded>
+```
 
 #### elementType
 > Type: `string`
@@ -56,9 +92,16 @@ The `active` prop allows controll of _when_ to scroll to the component. By defau
 
 Set the wrapper component type. For example, this could also be `'footer'`, `'button'`, etc...  See the React [createElement](https://reactjs.org/docs/react-api.html#createelement) api.
 
-#### options
-> Type: `object`
-> Default: `{ duration: 250, easing: 'easeOut' }`
+```js
+<ScrollIntoViewIfNeeded elementType="span">
+  <div>Hello</div>
+</ScrollIntoViewIfNeeded>
+```
 
-The `options` prop simply passes options to `scroll-into-view-if-needed`. See all the possible options in their [API documentation](https://www.npmjs.com/package/scroll-into-view-if-needed#api).
+#### className, id, etc
 
+You can also pass normal element attributes like `className` to the component.
+
+## Upgrading from v1
+
+This project has been updated along with `scroll-into-view-if-needed` and accepts the same `options`. Check out the [migration guide](https://www.npmjs.com/package/scroll-into-view-if-needed#breaking-api-changes-from-v1) over there!
