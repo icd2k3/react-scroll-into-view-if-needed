@@ -32,9 +32,8 @@ Each prop is described in detail below, but for a quicker reference - check out 
 #### options
 > Type: `object`
 > Default: `{ behavior: 'smooth', scrollMode: 'if-needed' }`
-> Full list of options [here](https://www.npmjs.com/package/scroll-into-view-if-needed#api)
 
-The `options` prop simply passes options to `scroll-into-view-if-needed`. See all the possible options in their [API documentation](https://www.npmjs.com/package/scroll-into-view-if-needed#api).
+Full list of options are described [here](https://www.npmjs.com/package/scroll-into-view-if-needed#api)
 
 ```js
 <ScrollIntoViewIfNeeded options={{
