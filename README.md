@@ -103,6 +103,12 @@ Set the wrapper component type. For example, this could also be `'footer'`, `'bu
 
 You can also pass normal element attributes like `className` to the component.
 
+```js
+<ScrollIntoViewIfNeeded elementType="span" className={styles.something}>
+  <div>Hello</div>
+</ScrollIntoViewIfNeeded>
+```
+
 ## Upgrading from v1
 
 This project has been updated along with `scroll-into-view-if-needed` and accepts the same `options`. Check out the [migration guide](https://www.npmjs.com/package/scroll-into-view-if-needed#breaking-api-changes-from-v1) over there!
