@@ -9,8 +9,8 @@ ShallowWrapper {
     elementType="div"
     options={
       Object {
-        "duration": 250,
-        "easing": "easeOut",
+        "behavior": "smooth",
+        "scrollMode": "if-needed",
       }
     }
   >
@@ -86,8 +86,8 @@ ShallowWrapper {
     elementType="div"
     options={
       Object {
-        "duration": 250,
-        "easing": "easeOut",
+        "behavior": "smooth",
+        "scrollMode": "if-needed",
       }
     }
   >

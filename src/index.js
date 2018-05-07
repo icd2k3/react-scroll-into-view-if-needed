@@ -10,22 +10,34 @@ export default class ScrollIntoViewIfNeeded extends PureComponent {
     elementType: PropTypes.string,
     // this shape should mirror the scroll-into-view-if-needed options
     options: PropTypes.shape({
-      boundary: PropTypes.node,
-      centerIfNeeded: PropTypes.bool,
-      duration: PropTypes.number,
-      easing: PropTypes.oneOf([
-        'ease',
-        'easeIn',
-        'easeOut',
-        'easeInOut',
-        'linear',
+      behavior: PropTypes.oneOfType([
+        PropTypes.oneOf([
+          'auto',
+          'smooth',
+          'instant',
+        ]),
+        PropTypes.func,
       ]),
-      offset: PropTypes.shape({
-        top: PropTypes.number,
-        right: PropTypes.number,
-        bottom: PropTypes.number,
-        left: PropTypes.number,
-      }),
+      block: PropTypes.oneOf([
+        'center',
+        'end',
+        'nearest',
+        'start',
+      ]),
+      inline: PropTypes.oneOf([
+        'center',
+        'end',
+        'nearest',
+        'start',
+      ]),
+      scrollMode: PropTypes.oneOf([
+        'always',
+        'if-needed',
+      ]),
+      boundary: PropTypes.oneOfType([
+        PropTypes.element,
+        PropTypes.func,
+      ]),
     }),
   };
 
@@ -33,8 +45,8 @@ export default class ScrollIntoViewIfNeeded extends PureComponent {
     active: true,
     elementType: 'div',
     options: {
-      duration: 250,
-      easing: 'easeOut',
+      behavior: 'smooth',
+      scrollMode: 'if-needed',
     },
   };
 
