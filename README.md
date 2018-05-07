@@ -1,8 +1,6 @@
 [![Build Status](https://travis-ci.org/icd2k3/react-scroll-into-view-if-needed.svg?branch=master)](https://travis-ci.org/icd2k3/react-scroll-into-view-if-needed)
 [![Coverage Status](https://coveralls.io/repos/github/icd2k3/react-scroll-into-view-if-needed/badge.svg)](https://coveralls.io/github/icd2k3/react-scroll-into-view-if-needed)
 
-## Description
-
 A thin react component wrapper bundled with the fantastic [scroll-into-view-if-needed](https://www.npmjs.com/package/scroll-into-view-if-needed) [ponyfill](https://ponyfill.com).
 
 ## Install
@@ -39,6 +37,24 @@ The standalone version does **not** come bundled with [scroll-into-view-if-neede
 
 `import ScrollIntoViewIfNeeded from 'react-scroll-into-view-if-needed/dist/umd/standalone.js'`
 
+
+## Props
+
+#### options
+> Type: `object`
+> Default: `{ behavior: 'smooth', scrollMode: 'if-needed' }`
+> Full list of options [here](https://www.npmjs.com/package/scroll-into-view-if-needed#api)
+
+The `options` prop simply passes options to `scroll-into-view-if-needed`. See all the possible options in their [API documentation](https://www.npmjs.com/package/scroll-into-view-if-needed#api).
+
+```js
+<ScrollIntoViewIfNeeded options={{
+  scrollMode: 'always',
+}}>
+  <div>Hello</div>
+</ScrollIntoViewIfNeeded>
+```
+
 #### active
 > Type: `boolean`
 > Default: `true`
@@ -69,21 +85,6 @@ class Example extends React.PureComponent {
     );
   }
 }
-```
-
-#### options
-> Type: `object`
-> Default: `{ behavior: 'smooth', scrollMode: 'if-needed' }`
-> Full list of options [here](https://www.npmjs.com/package/scroll-into-view-if-needed#api)
-
-The `options` prop simply passes options to `scroll-into-view-if-needed`. See all the possible options in their [API documentation](https://www.npmjs.com/package/scroll-into-view-if-needed#api).
-
-```js
-<ScrollIntoViewIfNeeded options={{
-  scrollMode: 'always',
-}}>
-  <div>Hello</div>
-</ScrollIntoViewIfNeeded>
 ```
 
 #### elementType
