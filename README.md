@@ -99,7 +99,7 @@ You can also pass normal element attributes like `className` to the component.
 
 ## Standalone Version
 
-The standalone version does **not** come bundled with [scroll-into-view-if-needed](https://www.npmjs.com/package/scroll-into-view-if-needed). Use this version if you'd like to maintain your own dependency for scroll-into-view-if-needed, or if you're already using scroll-into-view-if-needed in other areas of your project.
+The standalone version does **not** come bundled with [scroll-into-view-if-needed](https://www.npmjs.com/package/scroll-into-view-if-needed). Use this version if you'd like to maintain your own dependency, or if you're already using [scroll-into-view-if-needed](https://www.npmjs.com/package/scroll-into-view-if-needed) in other areas of your project.
 
 **ES version:**
 
@@ -111,4 +111,4 @@ The standalone version does **not** come bundled with [scroll-into-view-if-neede
 
 ## Upgrading from v1
 
-This project has been updated along with `scroll-into-view-if-needed` and accepts the same `options`. Check out the [migration guide](https://www.npmjs.com/package/scroll-into-view-if-needed#breaking-api-changes-from-v1) over there!
+This project has been updated along with [scroll-into-view-if-needed](https://www.npmjs.com/package/scroll-into-view-if-needed) and accepts the same `options`. Check out the [migration guide](https://www.npmjs.com/package/scroll-into-view-if-needed#breaking-api-changes-from-v1) over there!
