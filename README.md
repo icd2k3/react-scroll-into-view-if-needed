@@ -40,6 +40,8 @@ The standalone version does **not** come bundled with [scroll-into-view-if-neede
 
 ## Props
 
+Each prop is described in detail below, but for a quicker reference - check out the [propTypes](https://github.com/icd2k3/react-scroll-into-view-if-needed/blob/master/src/index.js#L7-L42) object in src.
+
 #### options
 > Type: `object`
 > Default: `{ behavior: 'smooth', scrollMode: 'if-needed' }`
