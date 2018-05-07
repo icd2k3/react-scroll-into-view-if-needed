@@ -25,19 +25,6 @@ const MyComponent = () => (
 );
 ```
 
-## Standalone Version
-
-The standalone version does **not** come bundled with [scroll-into-view-if-needed](https://www.npmjs.com/package/scroll-into-view-if-needed). Use this version if you'd like to maintain your own dependency for scroll-into-view-if-needed, or if you're already using scroll-into-view-if-needed in other areas of your project.
-
-**ES version:**
-
-`import ScrollIntoViewIfNeeded from 'react-scroll-into-view-if-needed/dist/es/standalone.js'`
-
-**UMD version:**
-
-`import ScrollIntoViewIfNeeded from 'react-scroll-into-view-if-needed/dist/umd/standalone.js'`
-
-
 ## Props
 
 Each prop is described in detail below, but for a quicker reference - check out the [propTypes](https://github.com/icd2k3/react-scroll-into-view-if-needed/blob/master/src/index.js#L7-L42) object in src.
@@ -110,6 +97,18 @@ You can also pass normal element attributes like `className` to the component.
   <div>Hello</div>
 </ScrollIntoViewIfNeeded>
 ```
+
+## Standalone Version
+
+The standalone version does **not** come bundled with [scroll-into-view-if-needed](https://www.npmjs.com/package/scroll-into-view-if-needed). Use this version if you'd like to maintain your own dependency for scroll-into-view-if-needed, or if you're already using scroll-into-view-if-needed in other areas of your project.
+
+**ES version:**
+
+`import ScrollIntoViewIfNeeded from 'react-scroll-into-view-if-needed/dist/es/standalone.js'`
+
+**UMD version:**
+
+`import ScrollIntoViewIfNeeded from 'react-scroll-into-view-if-needed/dist/umd/standalone.js'`
 
 ## Upgrading from v1
 
