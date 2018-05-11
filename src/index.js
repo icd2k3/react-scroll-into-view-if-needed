@@ -38,6 +38,7 @@ export default class ScrollIntoViewIfNeeded extends PureComponent {
         PropTypes.element,
         PropTypes.func,
       ]),
+      skipOverflowHiddenElements: PropTypes.bool,
     }),
   };
 
