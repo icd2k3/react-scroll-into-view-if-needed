@@ -1,9 +1,13 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import ScrollIntoViewIfNeeded from '../';
+import ScrollIntoViewIfNeeded from '..';
 import mockScroll from '../../__mocks__/scroll-into-view-if-needed';
 
-const MockChild = () => (<div>Yo</div>);
+const MockChild = () => (
+  <div>
+    Yo
+  </div>
+);
 
 test('Render with no props', () => {
   const wrapper = shallow(
