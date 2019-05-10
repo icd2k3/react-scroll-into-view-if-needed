@@ -4,7 +4,7 @@ module.exports = {
   coveragePathIgnorePatterns: [
     '/node_modules/',
     '/coverage/',
-    'jest.setup.js'
+    'jest.setup.js',
   ],
   coverageThreshold: {
     global: {
@@ -15,4 +15,5 @@ module.exports = {
     },
   },
   setupFiles: ['./jest.setup.js'],
+  snapshotSerializers: ['enzyme-to-json/serializer']
 };

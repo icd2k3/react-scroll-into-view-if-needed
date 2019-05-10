@@ -8,7 +8,11 @@ const IS_STANDALONE_BUILD = process.env.BUILD_TYPE === 'standalone';
 const name = 'react-scroll-into-view-if-needed';
 const external = Object.keys(pkg.peerDependencies)
   .concat(IS_STANDALONE_BUILD ? 'scroll-into-view-if-needed' : []);
-const globals = { react: 'React' };
+const globals = {
+  react: 'React',
+  'prop-types': 'PropTypes',
+  'scroll-into-view-if-needed': 'scrollIntoViewIfNeeded',
+};
 const rootOutputProps = {
   exports: 'named',
   globals,
@@ -30,13 +34,8 @@ const config = {
   plugins: [
     babel({
       exclude: 'node_modules/**',
-      plugins: ['external-helpers'],
     }),
-    resolve({
-      module: true,
-      jsnext: true,
-      main: true,
-    }),
+    resolve(),
     commonjs(),
   ],
   external,

@@ -1,56 +1,64 @@
 {
   "name": "react-scroll-into-view-if-needed",
-  "version": "2.1.7",
+  "version": "2.1.8",
   "description": "A thin component wrapper around scroll-into-view-if-needed",
   "main": "dist/umd/index.js",
   "module": "dist/es/index.js",
   "repository": "git@github.com:icd2k3/react-scroll-into-view-if-needed.git",
-  "author": "Justin Schrader <icd2k3@gmail.com>",
+  "author": "Justin Schrader <me@justin.beer>",
+  "license": "MIT",
   "keywords": [
     "react",
     "scroll-into-view-if-needed",
     "scroll",
     "scrolling"
   ],
-  "license": "MIT",
-  "peerDependencies": {
-    "prop-types": "^15.6.1",
-    "react": "^16.0.0"
-  },
-  "dependencies": {},
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-eslint": "^8.2.6",
-    "babel-jest": "^23.4.0",
-    "babel-plugin-external-helpers": "^6.22.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-2": "^6.24.1",
-    "coveralls": "^3.0.2",
-    "cross-env": "^5.2.0",
-    "enzyme": "^3.3.0",
-    "enzyme-adapter-react-16": "^1.1.1",
-    "eslint": "^5.1.0",
-    "eslint-config-airbnb": "^17.0.0",
-    "eslint-plugin-import": "^2.13.0",
-    "eslint-plugin-jsx-a11y": "^6.1.0",
-    "eslint-plugin-react": "^7.10.0",
-    "jest": "^23.4.0",
-    "prop-types": "^15.6.2",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
-    "rollup": "^0.62.0",
-    "rollup-plugin-babel": "^3.0.7",
-    "rollup-plugin-commonjs": "^9.1.3",
-    "rollup-plugin-node-resolve": "^3.3.0",
-    "scroll-into-view-if-needed": "^2.2.16"
-  },
   "scripts": {
     "build": "rollup -c && cross-env BUILD_TYPE=standalone rollup -c",
     "lint": "eslint ./src/**",
     "prepublishOnly": "yarn build",
     "test": "jest",
     "travis": "yarn run lint && jest && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-push": "yarn lint && yarn test"
+    }
+  },
+  "peerDependencies": {
+    "prop-types": ">=15",
+    "react": ">=16"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
+    "@commitlint/config-conventional": "^7.6.0",
+    "babel-eslint": "^10.0.1",
+    "commitlint": "^7.6.1",
+    "coveralls": "^3.0.3",
+    "cross-env": "^5.2.0",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.12.1",
+    "enzyme-to-json": "^3.3.5",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.13.0",
+    "husky": "^2.2.0",
+    "jest": "^24.8.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "rollup": "^1.11.3",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^9.3.4",
+    "rollup-plugin-node-resolve": "^4.2.3",
+    "scroll-into-view-if-needed": "^2.2.20"
   }
 }
