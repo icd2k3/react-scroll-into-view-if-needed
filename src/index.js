@@ -35,6 +35,7 @@ export default class ScrollIntoViewIfNeeded extends PureComponent {
         'if-needed',
       ]),
       boundary: PropTypes.oneOfType([
+        // eslint-disable-next-line no-undef
         PropTypes.instanceOf(Element),
         PropTypes.func,
       ]),
