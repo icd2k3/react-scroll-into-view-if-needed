@@ -4,54 +4,6 @@ import PropTypes from 'prop-types';
 import scrollIntoViewIfNeeded from 'scroll-into-view-if-needed';
 
 export default class ScrollIntoViewIfNeeded extends PureComponent {
-  static propTypes = {
-    active: PropTypes.bool,
-    children: PropTypes.node.isRequired,
-    elementType: PropTypes.string,
-    // this shape should mirror the scroll-into-view-if-needed options
-    options: PropTypes.shape({
-      behavior: PropTypes.oneOfType([
-        PropTypes.oneOf([
-          'auto',
-          'smooth',
-          'instant',
-        ]),
-        PropTypes.func,
-      ]),
-      block: PropTypes.oneOf([
-        'center',
-        'end',
-        'nearest',
-        'start',
-      ]),
-      inline: PropTypes.oneOf([
-        'center',
-        'end',
-        'nearest',
-        'start',
-      ]),
-      scrollMode: PropTypes.oneOf([
-        'always',
-        'if-needed',
-      ]),
-      boundary: PropTypes.oneOfType([
-        // eslint-disable-next-line no-undef
-        PropTypes.instanceOf(Element),
-        PropTypes.func,
-      ]),
-      skipOverflowHiddenElements: PropTypes.bool,
-    }),
-  };
-
-  static defaultProps = {
-    active: true,
-    elementType: 'div',
-    options: {
-      behavior: 'smooth',
-      scrollMode: 'if-needed',
-    },
-  };
-
   constructor() {
     super();
     this.node = createRef();
@@ -88,3 +40,50 @@ export default class ScrollIntoViewIfNeeded extends PureComponent {
     return createElement(elementType, { ref: this.node, ...wrapperProps }, children);
   }
 }
+ScrollIntoViewIfNeeded.propTypes = {
+  active: PropTypes.bool,
+  children: PropTypes.node.isRequired,
+  elementType: PropTypes.string,
+  // this shape should mirror the scroll-into-view-if-needed options
+  options: PropTypes.shape({
+    behavior: PropTypes.oneOfType([
+      PropTypes.oneOf([
+        'auto',
+        'smooth',
+        'instant',
+      ]),
+      PropTypes.func,
+    ]),
+    block: PropTypes.oneOf([
+      'center',
+      'end',
+      'nearest',
+      'start',
+    ]),
+    inline: PropTypes.oneOf([
+      'center',
+      'end',
+      'nearest',
+      'start',
+    ]),
+    scrollMode: PropTypes.oneOf([
+      'always',
+      'if-needed',
+    ]),
+    boundary: PropTypes.oneOfType([
+      // eslint-disable-next-line no-undef
+      PropTypes.instanceOf(Element),
+      PropTypes.func,
+    ]),
+    skipOverflowHiddenElements: PropTypes.bool,
+  }),
+};
+
+ScrollIntoViewIfNeeded.defaultProps = {
+  active: true,
+  elementType: 'div',
+  options: {
+    behavior: 'smooth',
+    scrollMode: 'if-needed',
+  },
+};

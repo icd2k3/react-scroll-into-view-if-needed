@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Render in inactive state, then toggle active state 1`] = `
+exports['Render in inactive state, then toggle active state 1'] = `
 <div>
   <MockChild />
 </div>
 `;
 
-exports[`Render with no props 1`] = `
+exports['Render with no props 1'] = `
 <div>
   <MockChild />
 </div>
