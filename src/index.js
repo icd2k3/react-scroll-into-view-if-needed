@@ -71,8 +71,7 @@ ScrollIntoViewIfNeeded.propTypes = {
       'if-needed',
     ]),
     boundary: PropTypes.oneOfType([
-      // eslint-disable-next-line no-undef
-      PropTypes.instanceOf(Element),
+      PropTypes.element,
       PropTypes.func,
     ]),
     skipOverflowHiddenElements: PropTypes.bool,
