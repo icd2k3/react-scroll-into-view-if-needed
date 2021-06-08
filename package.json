@@ -1,6 +1,6 @@
 {
   "name": "react-scroll-into-view-if-needed",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "A thin component wrapper around scroll-into-view-if-needed",
   "main": "dist/umd/index.js",
   "module": "dist/es/index.js",
